@@ -3,7 +3,6 @@
 import * as React from 'react';
 import './box-styles.css';
 
-
 const smallBox = (
 	<div
 		className='box--small'
@@ -29,13 +28,15 @@ const largeBox = (
 	</div>
 );
 
+const Box = props => <div className='box'>{props.children}</div>;
+
 function App() {
 	return (
-		<div className='box'>
+		<Box className='box'>
 			{smallBox}
 			{mediumBox}
 			{largeBox}
-		</div>
+		</Box>
 	);
 }
 
